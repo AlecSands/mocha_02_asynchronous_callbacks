@@ -19,17 +19,15 @@ allFunctions = {};
 //     return TypeError('expected a boolean');
 //   }
 // }
-//
-// allFunctions.greeting = function (name) {
-//   alert('Hello ' + name);
-// };
-//
-// allFunctions.processUserInput = function(callback) {
-//   var name = prompt('Please enter your name.');
-//   callback(name);
-// };
-//
-// allFunctions.processUserInput(greeting);
+
+allFunctions.greeting = function (name) {
+  return name;
+};
+
+allFunctions.processUserInput = function(callback) {
+  var name = 'Alec';
+  return callback(name);
+};
 
 allFunctions.simpleFunction = function(input) {
   var typeOfInput = typeof input;
