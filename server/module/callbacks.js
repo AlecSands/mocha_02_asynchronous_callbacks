@@ -1,3 +1,5 @@
+allFunctions = {};
+
 function basicCallback (string, callback) {
   var type = '';
   if (typeof string == 'string') {
@@ -18,5 +20,15 @@ function returnOutcome (response) {
   }
 }
 
+allFunctions.greeting = function (name) {
+  alert('Hello ' + name);
+};
 
-module.exports = basicCallback;
+allFunctions.processUserInput = function(callback) {
+  var name = prompt('Please enter your name.');
+  callback(name);
+};
+
+allFunctions.processUserInput(greeting);
+
+module.exports = {testFunction: basicCallback, testCallback: returnOutcome};
